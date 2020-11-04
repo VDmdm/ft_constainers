@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/21 18:28:02 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/11/04 10:14:19 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 12:55:02 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -668,6 +668,12 @@ namespace ft {
 		}
 
 	};
+	template <class T, class Alloc>
+	void swap(ft::list<T, Alloc> &lhs, ft::list<T, Alloc> &rhs) {
+
+		lhs.swap(rhs);
+
+	}
 	
 };
 
@@ -762,11 +768,5 @@ bool operator>=(const ft::list<T, Alloc> &lhs, const ft::list<T, Alloc> &rhs) {
 
 }
 
-template <class T, class Alloc>
-void swap(const ft::list<T, Alloc> &lhs, const ft::list<T, Alloc> &rhs) {
-
-	lhs.swap(rhs);
-
-}
 
 #endif

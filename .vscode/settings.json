@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"map": "cpp",
+		"type_traits": "cpp"
+	}
+}

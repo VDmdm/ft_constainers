@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/21 18:28:02 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/11/04 10:16:24 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 13:29:41 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -367,6 +367,13 @@ namespace ft {
 
 		}
 	};
+
+	template <class T, class Alloc>
+	void swap(ft::vector<T, Alloc> &lhs, ft::vector<T, Alloc> &rhs) {
+
+	lhs.swap(rhs);
+
+	}
 };
 
 template <class T, class Alloc>
@@ -460,13 +467,6 @@ template <class T, class Alloc>
 bool operator>=(const ft::vector<T, Alloc> &lhs, const ft::vector<T, Alloc> &rhs) {
 
 	return (lhs > rhs || lhs == rhs);
-
-}
-
-template <class T, class Alloc>
-void swap(const ft::vector<T, Alloc> &lhs, const ft::vector<T, Alloc> &rhs) {
-
-	lhs.swap(rhs);
 
 }
 

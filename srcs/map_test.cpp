@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 12:10:37 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/09/26 18:41:25 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 13:32:11 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1463,7 +1463,7 @@ const key_compare& comp = key_compare(), const allocator_type& alloc =\
 	std::cout << "После применения: " << std::endl;
 
 	swap(a, aa);
-	swap(b, bb);
+	ft::swap(b, bb);
 
 	print_2m(a, b);
 	print_2m(aa, bb);

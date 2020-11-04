@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 12:35:48 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/09/19 12:18:39 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 12:52:38 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1653,7 +1653,7 @@ int		list_test(void)
 
 		print_4(b, bb, a, aa);
 
-		swap(a, aa);
+		ft::swap(a, aa);
 		swap(b, bb);
 
 		std::cout << "После вызова: " << std::endl;

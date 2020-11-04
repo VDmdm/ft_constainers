@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 16:00:42 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/11/04 10:16:27 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 13:32:48 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -501,9 +501,10 @@ namespace ft
 	}
 
 	template < class Key, class T, class Compare, class Alloc >
-	void swap(const ft::map<Key, T, Compare, Alloc > &lhs, const ft::map<Key, T, Compare, Alloc > &rhs)
-	{
+	void swap(ft::map<Key, T, Compare, Alloc > &lhs, ft::map<Key, T, Compare, Alloc > &rhs) {
+
 		lhs.swap(rhs);
+
 	}
 }
 #endif
