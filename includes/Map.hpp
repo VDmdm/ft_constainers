@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 16:00:42 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/09/26 18:28:41 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 10:16:27 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ namespace ft
 		typedef std::pair<const key_type, mapped_type>					value_type;
 		typedef Compare													key_compare;
 		typedef Alloc													allocator_type;
-		typedef value_type&												reference;
-		typedef const value_type&										const_reference;
-		typedef value_type*												pointer;
-		typedef const value_type*										const_pointer;
+		typedef typename allocator_type::reference						reference;
+		typedef typename allocator_type::const_reference				const_reference;
+		typedef typename allocator_type::pointer						pointer;
+		typedef typename allocator_type::const_pointer					const_pointer;
 		typedef typename ft::MapIter< Key, T, Compare>					iterator;
 		typedef typename ft::ConstMapIter< Key, T, Compare>				const_iterator;
 		typedef typename ft::MapRevIter< Key, T, Compare>				reverse_iterator;

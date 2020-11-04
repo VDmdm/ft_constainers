@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/21 18:28:02 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/09/21 10:57:39 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 10:14:19 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,26 +35,26 @@ namespace ft {
 	
 	public:
 	
-		typedef T										value_type;
-		typedef Alloc									allocator_type;
-		typedef std::size_t								size_type;
-		typedef std::ptrdiff_t							difference_type;
-		typedef T&										reference;
-		typedef const T&								const_reference;
-		typedef T*										pointer;
-		typedef const T*								const_pointer;
-		typedef typename ft::ListIter<T>				iterator;
-		typedef typename ft::ConstListIter <T>			const_iterator;
-		typedef typename ft::revListIter <T>			reverse_iterator;
-		typedef typename ft::ConstRevListIter<T>		const_reverse_iterator;
+		typedef T											value_type;
+		typedef Alloc										allocator_type;
+		typedef std::size_t									size_type;
+		typedef std::ptrdiff_t								difference_type;
+		typedef typename allocator_type::reference			reference;
+		typedef typename allocator_type::const_reference	const_reference;
+		typedef typename allocator_type::pointer			pointer;
+		typedef typename allocator_type::const_pointer		const_pointer;
+		typedef typename ft::ListIter<T>					iterator;
+		typedef typename ft::ConstListIter <T>				const_iterator;
+		typedef typename ft::revListIter <T>				reverse_iterator;
+		typedef typename ft::ConstRevListIter<T>			const_reverse_iterator;
 
 	private:
 
-		dll<value_type>			*_front;
-		dll<value_type>			*_back;
-		dll<value_type>			*_end;
-		size_type				_length;
-		allocator_type			_Alloc;
+		dll<value_type>				*_front;
+		dll<value_type>				*_back;
+		dll<value_type>				*_end;
+		size_type					_length;
+		allocator_type				_Alloc;
 		std::allocator< dll < T > >	_nodeAlloc;
 
 	public:

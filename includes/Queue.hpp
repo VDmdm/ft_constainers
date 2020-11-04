@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 19:56:42 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/09/19 11:27:11 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 10:32:03 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,21 @@ namespace ft {
 
 	private:
 
-		container_type _base;
+		container_type	_base;
+		size_type		_size;
 
 	public:
 
 		/* Coplien */
 		explicit queue (const container_type& ctnr = container_type()):
-		_base(ctnr) {}
+		_base(ctnr), _size(0) {}
 
-		queue( const queue& other ) { *this = other; }
+		queue( const queue& other ): _size(0) { *this = other; }
 
 		queue& operator=( const queue& other ) {
 
 			this->_base = other._base;
+			this->_size = other._size;
 			return (*this);
 
 		}
@@ -52,9 +54,9 @@ namespace ft {
 
 		/* Member functions */
 
-		bool empty() const { return (this->_base.empty()); }
+		bool empty() const { return (this->_size == 0); }
 
-		size_type size(void) const { return (this->_base.size()); }
+		size_type size(void) const { return (this->_size); }
 
 		value_type& front(void) { return (this->_base.front()); }
 
@@ -64,9 +66,20 @@ namespace ft {
 
 		const value_type& back(void) const { return (this->_base.back()); }
 
-		void push (const value_type& val) { return (this->_base.push_back(val)); }
+		void push (const value_type& val) {
+			
+			this->_size++;
+			return (this->_base.push_back(val));
+			
+		}
 
-		void pop (void) { return (this->_base.pop_front()); }
+		void pop (void) { 
+			
+			if (this->_size)
+				this->_size--;
+			return (this->_base.pop_front());
+		
+		}
 
 	};
 }

@@ -537,8 +537,8 @@ int		vector_test(void)
 		const int &cref1 = a.at(2);
 		const int &cref2 = b.at(2);
 
-		std::cout << "ft::vector cref" << cref1 << std::endl;
-		std::cout << "std::vector cref" << cref2 << std::endl;
+		std::cout << "ft::vector cref " << cref1 << std::endl;
+		std::cout << "std::vector cref " << cref2 << std::endl;
 
 		try
 		{

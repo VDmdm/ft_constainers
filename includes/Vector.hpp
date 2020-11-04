@@ -6,7 +6,7 @@
 /*   By: jalvaro <jalvaro@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/21 18:28:02 by jalvaro           #+#    #+#             */
-/*   Updated: 2020/09/21 11:21:19 by jalvaro          ###   ########.fr       */
+/*   Updated: 2020/11/04 10:16:24 by jalvaro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,18 @@ namespace ft {
 	
 	public:
 	
-		typedef T										value_type;
-		typedef Alloc									allocator_type;
-		typedef std::size_t								size_type;
-		typedef std::ptrdiff_t							difference_type;
-		typedef T&										reference;
-		typedef const T&								const_reference;
-		typedef T*										pointer;
-		typedef const T*								const_pointer;
-		typedef typename ft::VectIter<T>				iterator;
-		typedef typename ft::ConstVectIter<T>			const_iterator;
-		typedef typename ft::ReverseVectIter<T>			reverse_iterator;
-		typedef typename ft::ConstReverseVectIter<T>	const_reverse_iterator;
+		typedef T											value_type;
+		typedef Alloc										allocator_type;
+		typedef std::size_t									size_type;
+		typedef std::ptrdiff_t								difference_type;
+		typedef typename allocator_type::reference			reference;
+		typedef typename allocator_type::const_reference	const_reference;
+		typedef typename allocator_type::pointer			pointer;
+		typedef typename allocator_type::const_pointer		const_pointer;
+		typedef typename ft::VectIter<T>					iterator;
+		typedef typename ft::ConstVectIter<T>				const_iterator;
+		typedef typename ft::ReverseVectIter<T>				reverse_iterator;
+		typedef typename ft::ConstReverseVectIter<T>		const_reverse_iterator;
 
 	private:
 
